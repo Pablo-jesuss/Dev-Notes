@@ -2,4 +2,20 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Helvetica, sans-serif;
+}
+
+body {
+  background-color: #0c0d0e;
+  color: aliceblue;
+}
+
+/* Cabeçalho */
+
+header {
+  border-bottom: 1px solid #ccc;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
