@@ -27,7 +27,7 @@ header {
 }
 
 #search-input {
-  background-color: #464749;
+  background-color: #202020;
   border-radius: 5px;
   border: none;
   padding: 10px;
@@ -41,7 +41,7 @@ header {
 }
 
 #export-notes {
-  background-color: #333;
+  background-color: #1b1b1b;
   border: 2px solid #fff;
   border-radius: 4px;
   color: #fff;
@@ -53,4 +53,32 @@ header {
 #export-notes:hover {
   color: #333;
   background-color: #fff;
+}
+
+/* Form */
+
+#add-note-container {
+  display: flex;
+  width: 400px;
+  gap: 1rem;
+  margin: 1rem auto 0;
+}
+
+#add-note-container input,
+#add-note-container button {
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#add-note-container input {
+  flex: 1;
+  background-color: transparent;
+  border: 1px solid #525356;
+  color: #fff;
+}
+
+#add-note-container button {
+  cursor: pointer;
+  background-color: #2c2c2c;
+  color: #fff;
 }
