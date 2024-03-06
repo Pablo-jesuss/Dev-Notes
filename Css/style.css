@@ -7,7 +7,6 @@
 
 body {
   background-color: #0c0d0e;
-  color: aliceblue;
 }
 
 /* Cabeçalho */
@@ -16,6 +15,27 @@ header {
   border-bottom: 1px solid #ccc;
   padding: 1rem 2rem;
   display: flex;
+  color: #fff;
   align-items: center;
   justify-content: space-around;
+}
+
+#search-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+#search-input {
+  background-color: #464749;
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+  font-weight: bold;
+  color: #ddd;
+  width: 400px;
+}
+
+#search-input::placeholder {
+  color: #ddd;
 }
