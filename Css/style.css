@@ -82,3 +82,22 @@ header {
   background-color: #2c2c2c;
   color: #fff;
 }
+
+/* Notas */
+
+#notes-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 250px);
+  padding: 2rem;
+  gap: 2rem;
+}
+
+.note {
+  min-height: 200px;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  background-color: #131212;
+  border-radius: 10px;
+  color: #fff;
+  position: relative;
+}
