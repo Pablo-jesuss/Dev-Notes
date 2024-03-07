@@ -101,3 +101,18 @@ header {
   color: #fff;
   position: relative;
 }
+
+.note textarea {
+  background-color: transparent;
+  resize: none;
+  color: #fff;
+  border: none;
+  height: 100%;
+  outline: none;
+}
+
+.note .bi-pin {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+}
