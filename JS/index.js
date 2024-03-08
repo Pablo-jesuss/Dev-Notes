@@ -50,6 +50,22 @@ function createNote(id, content, fixed) {
 
   element.appendChild(textarea);
 
+  const pinIcon = document.createElement("i");
+
+  pinIcon.classList.add(...["bi", "bi-pin"]);
+
+  element.appendChild(pinIcon);
+
+  if (fixed) {
+    element.classList.add("fixed");
+  }
+
+  // Eventos do elemento
+
+  element.querySelector(".bi-pin").addEventListener("click", () => {
+    toggleFixNote(id);
+  });
+
   return element;
 }
 // local Storage
@@ -58,6 +74,16 @@ function getNotes() {
   const notes = JSON.parse(localStorage.getItem("notes") || "[]");
 
   return notes;
+}
+
+function toggleFixNote(id) {
+  const notes = getNotes();
+
+  const targetNote = notes.filter((note) => note.id === id)[0];
+
+  targetNote.fixed = !targetNote.fixed;
+
+  saveNotes(notes);
 }
 
 function saveNotes(notes) {
