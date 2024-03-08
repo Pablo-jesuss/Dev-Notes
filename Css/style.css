@@ -10,7 +10,6 @@ body {
 }
 
 /* Cabeçalho */
-
 header {
   border-bottom: 1px solid #ccc;
   padding: 1rem 2rem;
@@ -56,7 +55,6 @@ header {
 }
 
 /* Form */
-
 #add-note-container {
   display: flex;
   width: 400px;
@@ -84,7 +82,6 @@ header {
 }
 
 /* Notas */
-
 #notes-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, 250px);
