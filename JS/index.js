@@ -84,16 +84,11 @@ function createNote(id, content, fixed) {
     toggleFixNote(id);
   });
 
+  element.querySelector(".bi-x-lg").addEventListener("click", () => {
+    deleteNote(id, element);
+  });
+
   return element;
-}
-// local Storage
-
-function getNotes() {
-  const notes = JSON.parse(localStorage.getItem("notes") || "[]");
-
-  const orderedNotes = notes.sort((a, b) => (a.fixed > b.fixed ? -1 : 1));
-
-  return orderedNotes;
 }
 
 function toggleFixNote(id) {
@@ -106,6 +101,24 @@ function toggleFixNote(id) {
   saveNotes(notes);
 
   showNotes();
+}
+
+function deleteNote(id, element) {
+  const notes = getNotes().filter((note) => note.id !== id);
+
+  saveNotes(notes);
+
+  notesContainer.removeChild(element);
+}
+
+// local Storage
+
+function getNotes() {
+  const notes = JSON.parse(localStorage.getItem("notes") || "[]");
+
+  const orderedNotes = notes.sort((a, b) => (a.fixed > b.fixed ? -1 : 1));
+
+  return orderedNotes;
 }
 
 function saveNotes(notes) {
