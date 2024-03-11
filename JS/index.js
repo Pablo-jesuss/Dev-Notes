@@ -62,6 +62,18 @@ function createNote(id, content, fixed) {
 
   element.appendChild(pinIcon);
 
+  const deleteIcon = document.createElement("i");
+
+  deleteIcon.classList.add(...["bi", "bi-x-lg"]);
+
+  element.appendChild(deleteIcon);
+
+  const duplicateIcon = document.createElement("i");
+
+  duplicateIcon.classList.add(...["bi", "bi-file-earmark-plus"]);
+
+  element.appendChild(duplicateIcon);
+
   if (fixed) {
     element.classList.add("fixed");
   }
