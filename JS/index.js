@@ -127,6 +127,18 @@ function copyNote(id) {
     content: targetNote.content,
     fixed: false,
   };
+
+  const noteElement = createNote(
+    noteObject.id,
+    noteObject.content,
+    noteObject.fixed
+  );
+
+  notesContainer.appendChild(noteElement);
+
+  notes.push(noteObject);
+
+  saveNotes(notes);
 }
 
 // local Storage
