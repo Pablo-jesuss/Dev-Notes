@@ -200,7 +200,13 @@ function exportData() {
   const csvString = [
     ["ID", "Conteúdo", "Fixado?"],
     ...notes.map((note) => [note.id, note.content, note.fixed]),
-  ];
+  ]
+    .map((e) => e.join(","))
+    .join("\n");
+
+  const element = document.createElement("a");
+
+  element.href = "data:text/csv;charset=utf8," + encodeURI(csvString);
 }
 
 // Eventos
