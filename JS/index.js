@@ -172,6 +172,23 @@ function saveNotes(notes) {
   localStorage.setItem("notes", JSON.stringify(notes));
 }
 
+function searchNotes(search) {
+  const searchResults = getNotes().filter((note) => {
+    note.content.includes(search);
+  });
+
+  if (search !== "") {
+    cleanNotes();
+
+    searchNotes.forEach((note) => {
+      const noteElement = createNote(note.id, note.content);
+      notesContainer.appendChild(noteElement);
+    });
+
+    return;
+  }
+}
+
 // Eventos
 
 addNoteBtn.addEventListener("click", () => addNote());
