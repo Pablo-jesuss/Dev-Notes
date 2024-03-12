@@ -207,6 +207,12 @@ function exportData() {
   const element = document.createElement("a");
 
   element.href = "data:text/csv;charset=utf8," + encodeURI(csvString);
+
+  element.target = "_blank";
+
+  element.download = "notes.csv";
+
+  element.click();
 }
 
 // Eventos
