@@ -173,20 +173,24 @@ function saveNotes(notes) {
 }
 
 function searchNotes(search) {
-  const searchResults = getNotes().filter((note) => {
-    note.content.includes(search);
-  });
+  const searchResults = getNotes().filter((note) =>
+    note.content.includes(search)
+  );
 
   if (search !== "") {
     cleanNotes();
 
-    searchNotes.forEach((note) => {
+    searchResults.forEach((note) => {
       const noteElement = createNote(note.id, note.content);
       notesContainer.appendChild(noteElement);
     });
 
     return;
   }
+
+  cleanNotes();
+
+  showNotes();
 }
 
 // Eventos
