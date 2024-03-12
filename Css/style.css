@@ -148,3 +148,32 @@ header {
 .note.fixed {
   background-color: #2c2c2c;
 }
+
+/* Responsividade */
+
+@media (max-width: 675px) {
+  header {
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  #search-container {
+    width: 100%;
+  }
+
+  #search-input {
+    width: 100%;
+  }
+
+  #add-note-container {
+    width: 100%;
+    padding: 0 2rem;
+  }
+}
+
+@media (max-width: 450px) {
+  #notes-container {
+    grid-template-columns: repeat(auto-fill, 100%);
+  }
+}
