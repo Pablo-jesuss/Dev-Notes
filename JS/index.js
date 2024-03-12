@@ -203,6 +203,12 @@ searchInput.addEventListener("keyup", (e) => {
   searchNotes(search);
 });
 
+noteInput.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    addNote();
+  }
+});
+
 // Inicialização
 
 showNotes();
